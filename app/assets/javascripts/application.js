@@ -16,17 +16,12 @@
 //= require chessboard
 //= require chess
 //= require_tree .
+//= require board
 
-jQuery(document).ready(function() {
-	$('#close_chat').click(function() {
-		$("#pnl_view_chat").hide();
-	});
-
-	$('#btn_view_chat').click(function() {
-		if ($("#pnl_view_chat").is(":visible")) {
-			$("#pnl_view_chat").hide();
-		} else {
-			$("#pnl_view_chat").show();
-		}
-	});
+$(document).ready(function() {
+	$('#collapseOne').on('shown.bs.collapse', function (e) {
+		$('#div_chat_content').animate({
+		  scrollTop: $('#div_chat_content').prop('scrollHeight')
+		});
+	})
 });

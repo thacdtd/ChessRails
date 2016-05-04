@@ -7,11 +7,9 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+  
   <body>
-
       <div class="container">
-
         <!-- Static navbar -->
         <nav class="navbar navbar-default">
           <div class="container-fluid">
@@ -30,7 +28,9 @@
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+					  Dropdown <span class="caret"></span>
+				  </a>
                   <ul class="dropdown-menu">
                     <li><a href="#">Action</a></li>
                     <li><a href="#">Another action</a></li>
@@ -52,7 +52,7 @@
         </nav>
 
         <!-- Main component for a primary marketing message or call to action -->
-        <div class="jumbotron">
+        <div class="">
           <p><%= yield %></p>
         </div>
 		
@@ -62,9 +62,17 @@
 				<div class="col-md-7">
 				</div>
 		        <div class="col-md-5">
-					
-		            <div class="panel-collapse collapse chat_fix_bottom" id="collapseOne">
-		                <div class="panel-body">
+					<div class="panel panel-primary panel-collapse collapse chat_fix_bottom"  id="collapseOne">
+		              <div class="panel-heading" id="accordion">
+	                   <span class="glyphicon glyphicon-comment"></span> Chat
+	                   <div class="btn-group pull-right">
+	                     <a type="button" class="btn btn-default btn-xs" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                           <span class="glyphicon glyphicon-chevron-down"></span>
+	                     </a>
+	                   </div>
+		             </div>
+		           <div class="">
+		                <div class="panel-body" id="div_chat_content">
 		                    <ul class="chat">
 		                        <li class="left clearfix"><span class="chat-img pull-left">
 		                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
@@ -123,10 +131,16 @@
 		                            </div>
 		                        </li>
 		                    </ul>
+							
+							<div id="chat_messages">
+								abc
+								<%= render Message.all %>
+							</div>
+							
 		                </div>
 		                <div class="panel-footer">
 		                    <div class="input-group">
-		                        <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." />
+		                        <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." data-behavior="room_speaker" />
 		                        <span class="input-group-btn">
 		                            <button class="btn btn-warning btn-sm" id="btn-chat">
 		                                Send</button>
@@ -134,9 +148,7 @@
 		                    </div>
 		                </div>
 		            </div>
-					
-		            
-					
+		          </div>
 		        </div>
 		    </div>
 		</div>

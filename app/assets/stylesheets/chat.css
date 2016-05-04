@@ -60,7 +60,7 @@
 
 .chat_fix_bottom{
      position:absolute;
-     bottom:0px;
+     bottom:-16px;
      right:0px;
 	 z-index:9999;
 }
