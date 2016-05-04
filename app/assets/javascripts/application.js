@@ -16,3 +16,17 @@
 //= require chessboard
 //= require chess
 //= require_tree .
+
+jQuery(document).ready(function() {
+	$('#close_chat').click(function() {
+		$("#pnl_view_chat").hide();
+	});
+
+	$('#btn_view_chat').click(function() {
+		if ($("#pnl_view_chat").is(":visible")) {
+			$("#pnl_view_chat").hide();
+		} else {
+			$("#pnl_view_chat").show();
+		}
+	});
+});

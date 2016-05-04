@@ -9,6 +9,157 @@
   </head>
 
   <body>
-    <%= yield %>
+
+      <div class="container">
+
+        <!-- Static navbar -->
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Project name</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
+                <li><a href="../navbar-static-top/">Static top</a></li>
+                <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div><!--/.container-fluid -->
+        </nav>
+
+        <!-- Main component for a primary marketing message or call to action -->
+        <div class="jumbotron">
+          <p><%= yield %></p>
+        </div>
+		
+		
+		<div class="navbar navbar-default navbar-fixed-bottom container-fluid">
+		    <div class="row">
+				<div class="col-md-7">
+				</div>
+		        <div class="col-md-5">
+					
+		            <div class="panel-collapse collapse chat_fix_bottom" id="collapseOne">
+		                <div class="panel-body">
+		                    <ul class="chat">
+		                        <li class="left clearfix"><span class="chat-img pull-left">
+		                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+		                        </span>
+		                            <div class="chat-body clearfix">
+		                                <div class="header">
+		                                    <strong class="primary-font">Jack Sparrow</strong> <small class="pull-right text-muted">
+		                                        <span class="glyphicon glyphicon-time"></span>12 mins ago</small>
+		                                </div>
+		                                <p>
+		                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+		                                    dolor, quis ullamcorper ligula sodales.
+		                                </p>
+		                            </div>
+		                        </li>
+		                        <li class="right clearfix"><span class="chat-img pull-right">
+		                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+		                        </span>
+		                            <div class="chat-body clearfix">
+		                                <div class="header">
+		                                    <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>13 mins ago</small>
+		                                    <strong class="pull-right primary-font">Bhaumik Patel</strong>
+		                                </div>
+		                                <p>
+		                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+		                                    dolor, quis ullamcorper ligula sodales.
+		                                </p>
+		                            </div>
+		                        </li>
+		                        <li class="left clearfix"><span class="chat-img pull-left">
+		                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+		                        </span>
+		                            <div class="chat-body clearfix">
+		                                <div class="header">
+		                                    <strong class="primary-font">Jack Sparrow</strong> <small class="pull-right text-muted">
+		                                        <span class="glyphicon glyphicon-time"></span>14 mins ago</small>
+		                                </div>
+		                                <p>
+		                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+		                                    dolor, quis ullamcorper ligula sodales.
+		                                </p>
+		                            </div>
+		                        </li>
+		                        <li class="right clearfix"><span class="chat-img pull-right">
+		                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+		                        </span>
+		                            <div class="chat-body clearfix">
+		                                <div class="header">
+		                                    <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>15 mins ago</small>
+		                                    <strong class="pull-right primary-font">Bhaumik Patel</strong>
+		                                </div>
+		                                <p>
+		                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+		                                    dolor, quis ullamcorper ligula sodales.
+		                                </p>
+		                            </div>
+		                        </li>
+		                    </ul>
+		                </div>
+		                <div class="panel-footer">
+		                    <div class="input-group">
+		                        <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." />
+		                        <span class="input-group-btn">
+		                            <button class="btn btn-warning btn-sm" id="btn-chat">
+		                                Send</button>
+		                        </span>
+		                    </div>
+		                </div>
+		            </div>
+					
+		            
+					
+		        </div>
+		    </div>
+		</div>
+		
+		
+		<div class="navbar navbar-default navbar-fixed-bottom">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-8">
+
+					</div>
+					<div class="col-md-4">
+			          <div class="btn-group pull-right">
+			            <a type="button" class="navbar-btn btn-default btn pull-right" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+			              <span class="glyphicon glyphicon-comment"></span>  Chat <span class="badge badge-important">42</span>
+			            </a>
+			          </div>
+				  </div>
+				</div>
+			</div>
+		</div>
+		
+		
+      </div> <!-- /container -->
   </body>
 </html>
