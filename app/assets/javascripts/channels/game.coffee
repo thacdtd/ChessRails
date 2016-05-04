@@ -8,16 +8,12 @@ App.game = App.cable.subscriptions.create "GameChannel",
         App.board.position("start")
         App.board.orientation(data.msg)
         @printMessage("Game started! You play as #{data.msg}.")
-        alert "game start"
       when "make_move"
         [source, target] = data.msg.split("-")
-        console.log source
-        alert "move 1"
         App.chess.move
           from: source
           to: target
           promotion: "q"
-        alert "move 2"
         App.board.position(App.chess.fen())
       when "opponent_forfeits"
         @printMessage("Opponent forfeits. You win!")
