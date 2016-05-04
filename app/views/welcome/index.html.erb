@@ -1,0 +1,15 @@
+<div id="chessboard" style="width: 400px"></div>
+<div id="messages"></div>
+
+<input type="button" id="startBtn" value="Start" />
+<input type="button" id="clearBtn" value="Clear" />
+
+<script type="text/javascript">
+	var chessboard = ChessBoard('chessboard', {
+	  draggable: true,
+	  dropOffBoard: 'trash',
+	  sparePieces: true
+	});
+	$('#startBtn').on('click', chessboard.start);
+	$('#clearBtn').on('click', chessboard.clear);
+</script>
