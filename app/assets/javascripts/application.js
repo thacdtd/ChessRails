@@ -19,9 +19,9 @@
 //= require board
 
 $(document).ready(function() {
-	$('#collapseOne').on('shown.bs.collapse', function (e) {
-		$('#div_chat_content').animate({
-		  scrollTop: $('#div_chat_content').prop('scrollHeight')
-		});
-	})
+  $('#collapseOne').on('shown.bs.collapse', function (e) {
+    $('#div_chat_content').animate({
+	  scrollTop: $('#div_chat_content').prop('scrollHeight')
+    });
+  });
 });

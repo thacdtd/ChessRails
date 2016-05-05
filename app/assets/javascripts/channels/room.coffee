@@ -19,7 +19,15 @@ $(document).on 'keypress', '[data-behavior~=room_speaker]', (event) ->
   if event.keyCode is 13 # return = send
     App.room.speak event.target.value
     event.target.value = ""
+    $('#span-mess_count').text(parseInt($('#span-mess_count').text()) + 1)
     event.preventDefault()
-  $('#div_chat_content').animate
-    scrollTop: $('#div_chat_content').prop('scrollHeight')
+    $('#div_chat_content').animate
+      scrollTop: $('#div_chat_content').prop('scrollHeight')
 
+$(document).on "click", "#btn-chat", ->
+  if $('#btn-input').val() != ''
+    App.room.speak $('#btn-input').val()
+    $('#btn-input').val("")
+    $('#span-mess_count').text(parseInt($('#span-mess_count').text()) + 1)
+    $('#div_chat_content').animate
+      scrollTop: $('#div_chat_content').prop('scrollHeight')
